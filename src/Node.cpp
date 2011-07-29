@@ -1,3 +1,7 @@
+/*
+ * Author: Vinay Sanjekar
+ */
+
 #include <iostream>
 #include <string>
 

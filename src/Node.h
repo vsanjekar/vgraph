@@ -4,12 +4,15 @@
  * description.
  */
 
+#ifndef _NODE_H
+#define _NODE_H
 class Node{
 
 	// Node id should be a generic type.
 	int nid;
-	String desc;
+	std::string desc;
 
 	public:
 	    Node();
 };
+#endif

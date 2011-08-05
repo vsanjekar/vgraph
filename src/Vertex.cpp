@@ -5,7 +5,7 @@
 #include <iostream>
 #include <string>
 
-#include "Node.h"
+#include "Vertex.h"
 
 using namespace std;
 

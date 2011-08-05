@@ -15,7 +15,7 @@ class Node{
 	// Some unique identifier for each node.
 	int nid;
 	int weight;
-	// Node name should be a generic type.
+	// TODO Node name should be a generic type.
 	// <> name;
 	std::string desc;
 

@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "Node.h"
+#include "Vertex.h"
 
 int main(){
 

@@ -11,5 +11,11 @@ using namespace std;
 
 Node::Node(){
 	
-	cout<<"Hi, I am a Node."<<endl;
+	// TODO initialize to a proper value
+	static int id=0;
+
+	nid=id++;
+	weight=1;
+	desc="Node";
+	cout<<"I am Node id-"<<nid<<" with weight "<<weight<<". Description: "<<desc<<endl;
 }

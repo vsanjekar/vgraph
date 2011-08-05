@@ -12,8 +12,11 @@
 #define _NODE_H
 class Node{
 
-	// Node id should be a generic type.
+	// Some unique identifier for each node.
 	int nid;
+	int weight;
+	// Node name should be a generic type.
+	// <> name;
 	std::string desc;
 
 	public:

@@ -1,1 +1,7 @@
 # How to commit the code
+git config --global user.name "name"
+git config --global user.email "email"
+git add <filename>/./*
+git status
+git commit
+git push origin 

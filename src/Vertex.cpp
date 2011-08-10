@@ -9,13 +9,13 @@
 
 using namespace std;
 
-Node::Node(){
+Vertex::Vertex(){
 	
 	// TODO initialize to a proper value
 	static int id=0;
 
 	nid=id++;
 	weight=1;
-	desc="Node";
-	cout<<"I am Node id-"<<nid<<" with weight "<<weight<<". Description: "<<desc<<endl;
+	desc="Vertex";
+	cout<<"I am Vertex id-"<<nid<<" with weight "<<weight<<". Description: "<<desc<<endl;
 }

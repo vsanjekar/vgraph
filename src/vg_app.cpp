@@ -1,8 +1,17 @@
 #include <iostream>
 
 #include "Vertex.h"
+#include "Heap.h"
+
+using namespace std;
 
 int main(){
 
-	Node *n1=new Node();
+	int i=0;
+
+	Vertex *v1=new Vertex();
+
+	// Heap<int> h1(1);
+	// h1.maxheap_insert(i);
+
 }

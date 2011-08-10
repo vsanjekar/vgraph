@@ -1,35 +1,32 @@
 /*
  * Generic min and max heap data structures 
  */
+#include <vector>
 
-#define MINHEAP 0
-#define MAXHEAP 1
-
-class Heap_Node{
-
-	public:
-	    Heap_Node *parent;
-	    Heap_Node *left, *right;
-};
+#define MIN_HEAP 0
+#define MAX_HEAP 1
 
 template <class Elem>
 class Heap{
 
 	private:
 	/* Type of heap. min/max heap.*/
-	int type;
+	int htype;
 	/* Maintain a root pointer and a current leaf pointer to insert the
 	 * elements */
-	Heap_Node *root;
-	Heap_Node *leaf;
-
-	/* These functions will be used internally for inserting into heap. */
-	void minheap_insert(Elem e);
-	void maxheap_insert(Elem e);
+	std::vector<Elem> heap;
 
 	public:
-	    Heap();
+	    Heap(int ht);
+
+	/* These functions will be used internally for inserting into heap. */
+	    /*
+	    void minheap_insert(Elem e);
+	    void maxheap_insert(Elem e);
+
+	    void heap_print();
 	    void heap_insert(Elem e);
 	    Elem heap_extract_root();
+	    */
 };
  

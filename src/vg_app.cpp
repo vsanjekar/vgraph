@@ -9,9 +9,13 @@ int main(){
 
 	int i=0;
 
-	Vertex *v1=new Vertex();
+	Vertex *v=new Vertex();
 
-	// Heap<int> h1(1);
-	// h1.maxheap_insert(i);
+	Heap<int, int> h(MIN_HEAP);
+	for (i=15; i>0; i--){
+	
+		h.insert(i);
+	}
+	h.print();
 
 }

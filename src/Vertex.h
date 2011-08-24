@@ -13,7 +13,7 @@
 class Vertex{
 
 	// Some unique identifier for each node.
-	int nid;
+	int vid;
 	int weight;
 	// TODO Vertex name should be a generic type.
 	// <> name;

@@ -23,5 +23,6 @@ int main(){
 	h2.print();
 
 	/* Graphs */
-	Graph *G = new Graph(UNDIRECTED, 8, ADJ_LIST_REP);
+	Graph *G1 = new Graph(UNDIRECTED, 8, ADJ_LIST_REP);
+	Graph *G2 = new Graph(UNDIRECTED, 8, ADJ_MATRIX_REP);
 }

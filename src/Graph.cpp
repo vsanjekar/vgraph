@@ -8,22 +8,33 @@
 
 using namespace std;
 
-Graph::Graph(int gt, int n, int rept){
+Graph::Graph(int gt, int n, int repr){
 
+    // Each graph can be uniquely identified by a gid
+    gid=0;
 	//Create vertices
 	V = new Vertex[n];
 	gtype = gt;
-	rep = rept;
+	rep = repr;
 
+    AdjMatrix = NULL;
+    AdjList = NULL;
 	// Create a grpah of n vertices with rep_type representation
-	// Adjacency list representation of a graph is efficient on sparse
-	// graphs.
-	if(rept == ADJ_LIST_REP){
+	if(repr == ADJ_MATRIX_REP){
 
-	    //  Fill the adjacency list of each vertex.
+	    AdjMatrix = new int*[n];
+	    for(int i=0; i<n; i++){
+
+            AdjMatrix[i] = new int[n];
+	    }
 
 	}
-	else if(rept == ADJ_MATRIX_REP){
+	// Adjacency list representation of a graph is efficient on sparse
+	// graphs.
+	else if(repr == ADJ_LIST_REP){
+
+	    //  Fill the adjacency list of each vertex.
+        AdjList = new list<Vertex>[n];
 
 	}
 }

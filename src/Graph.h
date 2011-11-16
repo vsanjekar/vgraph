@@ -10,6 +10,8 @@
 
 class Graph{
 
+    // Each graph can be uniquely identified by a gid
+    int gid;
 	// Type of a graph (Directed or Undirected) and representation to use
 	unsigned int gtype, rep;
 	// Number of vertices
@@ -17,7 +19,8 @@ class Graph{
 	// Vertices
 	Vertex *V;
 	// Edges: representedas Adjacency list of adjacency matrix
-	int *AdjMatrix;
+	int **AdjMatrix;
+	std::list<Vertex> *AdjList;
 
 	public:
 	    Graph(int gtype, int n, int rep);

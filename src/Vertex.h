@@ -22,8 +22,6 @@ class Vertex{
 	    unsigned int vid;
 	    // Vertex weight
 	    int weight;
-	    // Adjacency List
-	    std::list<Vertex> *AdjList;
 
 	    // Optional description of the vertex
 	    std::string desc;

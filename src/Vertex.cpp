@@ -19,7 +19,6 @@ Vertex::Vertex(){
 	vid=id++;
 	weight=1;
 	desc="Vertex";
-	AdjList=NULL;
 	cout<<"I am Vertex id-"<<vid<<" with weight "<<weight<<". Description: "<<desc<<endl;
 }
 

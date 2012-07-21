@@ -10,6 +10,7 @@ int main(){
 	int i=0;
 
 	/* Heaps */
+	/*
 	Heap<int> h1(MIN_HEAP);
 	Heap<int, int> h2(MAX_HEAP);
 
@@ -21,8 +22,26 @@ int main(){
 	}
 	h1.print();
 	h2.print();
+	*/
 
 	/* Graphs */
-	Graph *G1 = new Graph(UNDIRECTED, 8, ADJ_LIST_REP);
-	Graph *G2 = new Graph(UNDIRECTED, 8, ADJ_MATRIX_REP);
+	Graph *G1 = new Graph(8, UNDIRECTED, ADJ_MATRIX_REP);
+	Graph *G2 = new Graph(8, UNDIRECTED, ADJ_LIST_REP);
+
+	G1->insertEdge(1, 2);
+	G1->insertEdge(1, 4);
+	G1->insertEdge(1, 7);
+	G1->insertEdge(4, 5);
+	G1->insertEdge(6, 8);
+	G1->insertEdge(5, 3);
+
+	G2->insertEdge(1, 2);
+	G2->insertEdge(1, 4);
+	G2->insertEdge(1, 7);
+	G2->insertEdge(4, 5);
+	G2->insertEdge(6, 8);
+	G2->insertEdge(5, 3);
+
+	G1->listEdges();
+	G2->listEdges();
 }

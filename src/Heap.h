@@ -1,5 +1,6 @@
 /*
- * Generic min and max heap data structures 
+ * Generic min and max heap data structures.
+ * TODO 2-3 Heap implementation.
  */
 
 #include <vector>

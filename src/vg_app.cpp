@@ -35,6 +35,9 @@ int main(){
 	G1->insertEdge(6, 8);
 	G1->insertEdge(5, 3);
 
+	G1->listVertices();
+	G1->listEdges();
+
 	G2->insertEdge(1, 2);
 	G2->insertEdge(1, 4);
 	G2->insertEdge(1, 7);
@@ -42,6 +45,5 @@ int main(){
 	G2->insertEdge(6, 8);
 	G2->insertEdge(5, 3);
 
-	G1->listEdges();
 	G2->listEdges();
 }

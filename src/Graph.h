@@ -1,7 +1,10 @@
+#ifndef _GRAPH_H
+#define _GRAPH_H
+
 #define UNDIRECTED 0x01 
 #define DIRECTED 0x02 
-#define WEIGHTED 0x04
-#define UNWEIGHTED 0x08 
+#define UNWEIGHTED 0x04
+#define WEIGHTED 0x08 
 
 #define ADJ_LIST_REP 1
 #define ADJ_MATRIX_REP 2
@@ -52,13 +55,16 @@ class Graph{
 	unsigned int type, rep;
 	int N;
 	Vertex *V;
+	std::vector<Vertex> Vv;
 	int **AdjMatrix;
 	std::vector<int> **AdjList;
 
 	public:
 	    Graph(int n, int gtype, int rep);
+	    void listVertices();
 	    void listEdges();
 	    void insertEdge(int u, int v);
 	    void insertEdge(int u, int v, int w);
+	    void draw();
 };
 #endif

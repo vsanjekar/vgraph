@@ -48,17 +48,18 @@ Graph::Graph(int nV, int gtype, int grep){
 
         /* 
          * Each graph can be uniquely identified by a gid
-         * Create vertices
+         * Create a grpah of n vertices with rep_type representation
          */
         gid=0;
         type = gtype;
         rep = grep;
         N = nV;
-        V = new Vertex[N];
-        AdjMatrix = NULL;
-        AdjList = NULL;
 
-        // Create a grpah of n vertices with rep_type representation
+	V = new Vertex[N];
+	for(int i=0; i<N; i++){
+	    Vv.push_back(V[i]);
+	}
+
         if(grep == ADJ_MATRIX_REP){
             /* Array of adjacency vectors(linear algebra) for each vertex.*/
             AdjMatrix = new int*[N];
@@ -81,8 +82,18 @@ Graph::Graph(int nV, int gtype, int grep){
         }
 }
 
+void Graph::listVertices(){
+        vector<Vertex>::iterator it;
+
+        cout<<"Vertices"<<endl;
+	for(int i=0; i<N; i++){
+            cout<<Vv[i].vid<<" "<<V[i].vid<<endl;
+	}
+}
+
 void Graph::listEdges(){
 
+        cout<<"Edges"<<endl;
 	if(rep == ADJ_MATRIX_REP){
             
             for(int i=0; i<N; i++){
@@ -129,4 +140,20 @@ void Graph::insertEdge(int u, int v, int weight){
 	    }
 	}
 
+}
+
+void Graph::draw(){
+	/*
+	glClearColor (0.0, 0.0, 0.0, 0.0);
+	glClear (GL_COLOR_BUFFER_BIT);
+	glColor3f (1.0, 1.0, 1.0);
+	glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
+	glBegin(GL_POLYGON);
+	glVertex3f (0.25, 0.25, 0.0);
+	glVertex3f (0.75, 0.25, 0.0);
+	glVertex3f (0.75, 0.75, 0.0);
+	glVertex3f (0.25, 0.75, 0.0);
+	glEnd();
+	glFlush();
+	*/
 }

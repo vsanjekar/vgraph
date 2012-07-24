@@ -25,15 +25,14 @@ int main(){
 	*/
 
 	/* Graphs */
-	Graph *G1 = new Graph(8, UNDIRECTED, ADJ_MATRIX_REP);
+	Graph *G1 = new Graph(4, UNDIRECTED, ADJ_MATRIX_REP);
 	Graph *G2 = new Graph(8, UNDIRECTED, ADJ_LIST_REP);
+	Graph *G3 = new Graph("examples/line", UNDIRECTED, ADJ_LIST_REP);
 
 	G1->insertEdge(1, 2);
 	G1->insertEdge(1, 4);
-	G1->insertEdge(1, 7);
-	G1->insertEdge(4, 5);
-	G1->insertEdge(6, 8);
-	G1->insertEdge(5, 3);
+	G1->insertEdge(1, 3);
+	G1->insertEdge(4, 2);
 
 	G1->listVertices();
 	G1->listEdges();
@@ -45,5 +44,10 @@ int main(){
 	G2->insertEdge(6, 8);
 	G2->insertEdge(5, 3);
 
+	G2->listVertices();
 	G2->listEdges();
+
+	G3->listVertices();
+	G3->listEdges();
+
 }

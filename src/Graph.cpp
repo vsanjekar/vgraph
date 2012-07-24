@@ -78,7 +78,35 @@ Graph::Graph(int nV, int gtype, int grep){
             for(int i=0; i<N; i++){
                 AdjList[i] = new vector<int>;
             }
+        }
+}
 
+Graph::Graph(char *filename, int gtype, int grep){
+        ifstream fs;
+        string line, temp;
+        stringstream ss;
+        int n, u, v;
+
+        fs.open(filename);
+        if(fs.is_open()) {
+            getline(fs, line);
+            n = atoi(line.c_str());
+            cout<<"No. of nodes = "<<n<<endl;
+            Graph(n, gtype, grep);
+
+            // TODO improve this routine. Error handling.
+            while(getline(fs, line)){
+                // Clear string stream. ss.str("");
+                ss.str(std::string());;
+                ss.str(line);
+                
+                cout<<ss.str()<<endl;
+                ss>>u>>temp>>v;
+                insertEdge(u, v);
+                ss.clear();
+            }
+        } else {
+            cout<<"Error: could not open file."<<endl;
         }
 }
 
@@ -87,8 +115,9 @@ void Graph::listVertices(){
 
         cout<<"Vertices"<<endl;
 	for(int i=0; i<N; i++){
-            cout<<Vv[i].vid<<" "<<V[i].vid<<endl;
+            cout<<Vv[i].vid<<" ";
 	}
+        cout<<endl;
 }
 
 void Graph::listEdges(){

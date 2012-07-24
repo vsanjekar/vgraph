@@ -15,8 +15,6 @@
  * description.
  */
 
-#ifndef _GRAPH_H
-#define _GRAPH_H
 class Vertex{
 
         friend class Graph;
@@ -61,6 +59,7 @@ class Graph{
 
 	public:
 	    Graph(int n, int gtype, int rep);
+	    Graph(char *filename, int gtype, int grep);
 	    void listVertices();
 	    void listEdges();
 	    void insertEdge(int u, int v);

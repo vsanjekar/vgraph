@@ -186,3 +186,26 @@ void Graph::draw(){
 	glFlush();
 	*/
 }
+
+/*********************************************
+ * UGraph definitions. 
+ ********************************************/
+UGraph::UGraph(int nV, int grep): Graph(nV, UNDIRECTED, grep){
+
+}
+
+UGraph::UGraph(char *filename, int grep): Graph(filename, UNDIRECTED, grep){
+
+}
+
+/*********************************************
+ * Graph definitions. 
+ ********************************************/
+DGraph::DGraph(int nV, int grep): Graph(nV, DIRECTED, grep){
+
+}
+
+DGraph::DGraph(char *filename, int grep): Graph(filename, DIRECTED, grep){
+
+}
+

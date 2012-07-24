@@ -3,6 +3,7 @@
 
 #define UNDIRECTED 0x01 
 #define DIRECTED 0x02 
+// TODO is this needed? instead add APIs to add weight to vertices & edges
 #define UNWEIGHTED 0x04
 #define WEIGHTED 0x08 
 
@@ -58,12 +59,43 @@ class Graph{
 	std::vector<int> **AdjList;
 
 	public:
-	    Graph(int n, int gtype, int rep);
+	    Graph(int n, int gtype, int grep);
 	    Graph(char *filename, int gtype, int grep);
+	    void insertVertex(int u);
+	    void insertVertex(int u, int weight);
+	    void insertEdge(int u, int v);
+	    void insertEdge(int u, int v, int weight);
 	    void listVertices();
 	    void listEdges();
-	    void insertEdge(int u, int v);
-	    void insertEdge(int u, int v, int w);
 	    void draw();
 };
+
+class UGraph: public Graph{
+
+	public:
+	    UGraph(int n, int grep);
+	    UGraph(char *filename, int grep);
+	    void insertVertex(int u);
+	    void insertVertex(int u, int weight);
+	    void insertEdge(int u, int v);
+	    void insertEdge(int u, int v, int weight);
+	    void listVertices();
+	    void listEdges();
+	    void draw();
+};
+
+class DGraph: public Graph{
+
+	public:
+	    DGraph(int n, int grep);
+	    DGraph(char *filename, int grep);
+	    void insertVertex(int u);
+	    void insertVertex(int u, int weight);
+	    void insertEdge(int u, int v);
+	    void insertEdge(int u, int v, int weight);
+	    void listVertices();
+	    void listEdges();
+	    void draw();
+};
+
 #endif
